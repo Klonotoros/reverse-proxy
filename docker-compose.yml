@@ -9,3 +9,13 @@ services:
     environment:
       CLICKHOUSE_USER: "userTest"
       CLICKHOUSE_PASSWORD: "passwordTest"
+  app:
+    build: .
+    ports:
+      - "3101:3101"
+      - "3102:3102"
+    depends_on:
+      - clicks
+    environment:
+      CLICKHOUSE_DSN: "tcp://clicks:9000?username=userTest&password=passwordTest"
+

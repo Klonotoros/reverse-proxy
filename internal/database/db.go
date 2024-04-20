@@ -3,10 +3,12 @@ package database
 import (
 	"database/sql"
 	_ "github.com/ClickHouse/clickhouse-go/v2"
+	"os"
 )
 
 func InitDB() *sql.DB {
-	DB, err := sql.Open("clickhouse", "tcp://localhost:9000?username=userTest&password=passwordTest")
+	dsn := os.Getenv("CLICKHOUSE_DSN")
+	DB, err := sql.Open("clickhouse", dsn)
 	if err != nil {
 		panic("Database could not connect: " + err.Error())
 		return nil
