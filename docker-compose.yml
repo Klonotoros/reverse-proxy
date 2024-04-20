@@ -1,0 +1,11 @@
+services:
+  clicks:
+    image: clickhouse/clickhouse-server
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    ulimits:
+      nofile: 262144
+    environment:
+      CLICKHOUSE_USER: "userTest"
+      CLICKHOUSE_PASSWORD: "passwordTest"
