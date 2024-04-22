@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
-  <database-model serializer="dbm" dbms="CLICKHOUSE" family-id="CLICKHOUSE" format-version="4.51">
+  <database-model serializer="dbm" dbms="CLICKHOUSE" family-id="CLICKHOUSE" format-version="4.52">
     <root id="1">
       <ServerVersion>24.3.2.23</ServerVersion>
     </root>
